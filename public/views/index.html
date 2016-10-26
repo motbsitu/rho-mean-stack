@@ -9,30 +9,35 @@
 
     <script src="scripts/app.module.js" charset="utf-8"></script>
     <script src="scripts/people.controller.js" charset="utf-8"></script>
-
+    <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="vendors/bootstrap.min.css">
 </head>
 
 <body ng-controller="PeopleController as ctrl">
     <div class="row">
-
-
     <div class="col-sm-offset-5 col-sm-2 text-center">
-        <button ng-click="ctrl.listPeople()" class="btn btn-block btn-success center-block">Get People</button>
+        <button id="people" ng-click="ctrl.listPeople()" class="btn btn-block btn-success center-block">Get People</button>
     </div>
       </div>
 
     <div class="row">
-        <table class="table table-hover">
-
-                <li class="list-group-item" ng-repeat="person in ctrl.people">
-                    <p>{{person.name}}</p>
-                    <p>{{person.hometown}} </p>
-                    <p>{{person.favoriteMovie}}</p>
-        </table>      
+        <table id="table" class="table table-hover .pull-left">
+            <thead>
+              <th class="col-sm-2">Name</th>
+              <th class="col-sm-2">Home Town</th>
+              <th class="col-sm-2">Favorite Movie</th>
+            </thead>
+            <tbody>
+              <tr ng-repeat="person in ctrl.people">
+                <td>{{person.name}}</td>
+                <td>{{person.hometown}} </td>
+                <td>{{person.favoriteMovie}}</td>
+              </tr>
+            </tbody>
+        </table>
 
     <div class="row">
-    <form class="form-horizontal">
+    <form id="form" class="form-horizontal">
       <div class="form-group">
         <label for="name" class="col-sm-2 control-label">Name:</label>
         <div class="col-sm-10">
