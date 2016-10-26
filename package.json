@@ -1,11 +1,11 @@
 {
   "name": "mongoose-intro",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "./build.sh"
+    "postinstall": "./build.sh",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "Ryan Mulcahy <mulchy81@gmail.com>",
@@ -16,5 +16,14 @@
     "bootstrap": "^3.3.7",
     "express": "^4.14.0",
     "mongoose": "^4.6.5"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/motbsitu/rho-mean-stack.git"
+  },
+  "bugs": {
+    "url": "https://github.com/motbsitu/rho-mean-stack/issues"
+  },
+  "homepage": "https://github.com/motbsitu/rho-mean-stack#readme",
+  "description": ""
 }

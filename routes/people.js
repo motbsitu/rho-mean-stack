@@ -12,8 +12,12 @@ router.get('/', function(req, res){
 
 router.post('/', function(req, res){
   var name = req.body.name;
+  var hometown = req.body.hometown;
+  var favoriteMovie = req.body.favoriteMovie;
   console.log('name', name);
-  var personToSave = new Person({name: name});
+  console.log('hometown', hometown);
+  console.log('favMovie', favoriteMovie);
+  var personToSave = new Person({name: name, hometown: hometown, favoriteMovie: favoriteMovie});
   personToSave.save().then(function(){
     console.log('saved a new person');
     res.send(201);
